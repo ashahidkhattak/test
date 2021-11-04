@@ -1,7 +1,7 @@
 ---
 id: music-pattern-analysis
 name: Music Pattern Analysis
-brief-description: Identification and extraction of patterns from a corpus of traditional Irish instrumental dance music
+brief-description: Identification and extraction of patterns from a corpus of traditional instrumental dance music
 type: 
 - Service
 - Library
