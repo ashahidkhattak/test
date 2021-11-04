@@ -4,10 +4,13 @@ name: Music Pattern Analysis
 brief-description: Identification and extraction of patterns from a corpus of traditional Irish instrumental dance music
 type: 
 - Service
+- Library
+- Dashboard
+- CLI tool
 release-date: 01/12/2021
 release-number: v0.1.0
 work-package: 
-- WP3
+- WP2, WP3
 credits: 
   - "Danny Diamond"
   - "James McDermott"
