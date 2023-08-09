@@ -22,7 +22,7 @@ pipeline {
                 script {
                     // Copy the extracted files to the Linux server
                         bat '''
-                        C:\\Program Files\\PuTTY\\pscp.exe -pw osboxex.org "C:\\Users\\AbdulShahid\\testweb" osboxex@${env.LINUX_SERVER}:${env.LINUX_DESTINATION}
+                        "C:\\Program Files\\PuTTY\\pscp.exe" -pw osboxex.org "C:\\Users\\AbdulShahid\\testweb" osboxex@${env.LINUX_SERVER}:${env.LINUX_DESTINATION}
                         '''
                 }
             }
