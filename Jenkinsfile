@@ -21,9 +21,15 @@ pipeline {
             steps {
                 script {
                     // Copy the extracted files to the Linux server
-                        cmd '''
-                        "C:\\Program Files\\PuTTY\\pscp.exe" -pw osboxes.org "C:\\Users\\AbdulShahid\\testweb\\*" osboxes@192.168.1.13:./testweb/
-                        '''
+                        def sourcePath = "C:\Users\AbdulShahid\testweb"
+                        def remoteUsername = "osboxes"
+                        def remoteHostname = "192.168.1.13"
+                        def remotePath = "./testweb/"
+
+                    // Use 'bat' step to run pscp command for copying files
+                    bat """
+                    "C:\\Program Files\\PuTTY\\pscp.exe" -pw osboxes.org "${sourcePath}\\*" ${remoteUsername}@${remoteHostname}:${remotePath}
+                    """
                 }
             }
         }
