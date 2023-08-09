@@ -21,9 +21,9 @@ pipeline {
             steps {
                 script {
                     // Copy the extracted files to the Linux server
-                    sshagent(credentials: ['testwebssh']) {
-                        bat "scp -r your-repo/* ${env.LINUX_USERNAME}@${env.LINUX_SERVER}:${env.LINUX_DESTINATION}"
-                    }
+                        bat '''
+                        pscp -pw osboxex.org "C:\\Users\\AbdulShahid\\testweb" osboxex@${env.LINUX_SERVER}:${env.LINUX_DESTINATION}
+                        '''
                 }
             }
         }
