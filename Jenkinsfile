@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     // Copy the extracted files to the Linux server
-                    sshagent(credentials: testwebssh) {
+                    sshagent(credentials: ['testwebssh']) {
                         bat "scp -r your-repo/* ${env.LINUX_USERNAME}@${env.LINUX_SERVER}:${env.LINUX_DESTINATION}"
                     }
                 }
