@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        GITHUB_REPO_URL = 'https://github.com/yourusername/your-repo.git'
+        GITHUB_REPO_URL = 'https://github.com/ashahidkhattak/test.git'
         LINUX_SERVER = '192.168.1.13'
         LINUX_USERNAME = 'osboxes'
         LINUX_DESTINATION = './testweb/'
