@@ -10,6 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+
                 script {
                     // Clone the GitHub repository
                     bat "git clone ${env.GITHUB_REPO_URL}"
